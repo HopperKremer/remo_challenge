@@ -2,8 +2,10 @@ import * as React from 'react';
 import './Theater.scss'; 
 import MapImage from '../assets/conference-map.svg';
 import TableConfig from './tableConfig.json';
+import {connect} from 'react-redux'
+import { selectCurrentUser } from 'reducers/user.selectors';
 
-const Theater: React.FC = () => {
+const Theater = ({selectCurrentUser}) => {
   const firstTable = TableConfig.tables[0];
 
   return ( 
@@ -26,5 +28,10 @@ const Theater: React.FC = () => {
     </div>
   );
 };
+
+//getting data back from store
+const mapStateToProps = (state) => ({
+  selectCurrentUser
+})
  
-export default Theater;
+export default connect(mapStateToProps, null) (Theater);

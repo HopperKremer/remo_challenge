@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Firebase from '../services/firebase';
 import { useHistory } from 'react-router-dom';
 
-const SignIn: React.FC = () => {
+const SignIn = () => {
   const history = useHistory();
 
   useEffect(() => {

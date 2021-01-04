@@ -3,7 +3,7 @@ import Firebase from '../services/firebase';
 import { useHistory } from 'react-router-dom';
 import { sendGetRequest, sendPostRequest } from '../apis';
 
-const Auth: React.FC = () => {
+const Auth = () => {
   const history = useHistory();
 
   useEffect(() => {
